@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Piana delle Selve produce in Umbria, nel cuore dell’Italia, canapa sativa di alta qualità">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:title" content="Piana delle Selve">
+    <meta property="og:description" content="Piana delle Selve produce in Umbria, nel cuore dell’Italia, canapa sativa di alta qualità">
+    <meta property="og:image" content="/images/head.jpg"> 
+    <title>{{ site.title }}{% if page.permalink!="/" %} - {{ page.title }}{% endif %}</title>
+    <style type="text/css">
+      {% capture style %}{% include style.sass %}{% endcapture %}{{ style | sassify }}
+    </style>
+  </head>
+  <body>
+  <nav>
+    <a href="/" {% if page.permalink=="/" %}class="active"{% endif %}>Home</a>
+    <a href="/shop.html" {% if page.permalink=="/shop" %}class="active"{% endif %}>Shop</a>
+    <a href="/analysis.html" {% if page.permalink=="/analysis" %}class="active"{% endif %}>Analysis</a>
+    <a href="/gallery.html" {% if page.permalink=="/gallery" %}class="active"{% endif %}>Gallery</a>
+    <a href="/contacts.html" {% if page.permalink=="/contacts" %}class="active"{% endif %}>Contacts</a>
+  </nav>
+  <main>
+    <header>
+    <h1 {% if page.description %}class="tight"{% endif %}>{{ page.title }}</h1>
+    {% if page.description %}<h2>{{ page.description }}</h2>{% endif %}
+    </header>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+      <p>{{ site.title }} - {{ site.society.street }} - {{ site.society.location }} - PI {{ site.society.pi }}</p>
+      <p><a href="mailto:{{ site.society.email }}">{{ site.society.email }}</a></p>
+    </footer>
+  </main>
+  </body>
+</html>

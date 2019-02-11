@@ -1,0 +1,30 @@
+title: Piana delle Selve
+description: L’Antica Canapa Umbra
+
+repository: pianadelleselve/pianadelleselve.github.io 
+url: https://www.pianadelleselve.com
+permalink: :title
+
+timezone: Europe/Rome
+
+plugins:
+  - jekyll-coffeescript
+
+collections:
+  pages:
+    output: true
+  shop:
+    output: true
+    permalink: ":path"
+
+exclude:
+  - README.md
+  - LICENSE
+
+society:
+  street: Strada Amelia-Giove, 114
+  location: 05022 Amelia (TR) Italy
+  email: info@pianadelleselve.com
+  pi: 01611980556
+
+orders: [1,2,3,5,10,100,250,500,1000,5000]

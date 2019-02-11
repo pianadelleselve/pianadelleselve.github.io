@@ -1,0 +1,15 @@
+<form action="/order.php" method="post" class="order">
+<h4>Order</h4>
+<input name="weed" id="weed" type="hidden" value="{{ include.item.title }}">
+<select id="grams" name="grams">
+{% for o in site.orders %}
+<option value="{{ o }}">{{ o }} gr.</option>
+{% endfor %}
+</select>
+<br><br>
+<input name="email" id="email" type="email" placeholder="Email" size="30">
+<br><br>
+<textarea name="text" id="text" rows="5" cols="30" placeholder="Message"></textarea>
+<br><br>
+<input type="submit" value="SEND">
+</form>

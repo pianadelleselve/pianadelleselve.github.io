@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat')
+$green: #108209
+html
+  overflow-y: scroll
+body
+  margin: 0
+  background-color: white
+  background-image: url("/images/hemp_light.jpg")
+  background-position-x: center
+  background-repeat: no-repeat 
+  color: #222
+  font-family: 'Montserrat', sans-serif
+  nav
+    text-transform: uppercase
+    padding: 1rem
+    text-align: center
+    background: $green
+    a
+      text-decoration: none
+      font-weight: bold
+      padding: 1rem
+      color: white
+      &:hover, &.active
+        background: white
+        color: $green
+  a
+    color: $green
+    &:hover
+      text-decoration: none
+  main
+    max-width: 70vw
+    margin: 2rem auto
+    header
+      margin-bottom: 3rem
+      h1.tight
+        margin-bottom: 0
+    h1, h2, h3, h4, h5, h6
+      font-family: 'Domine', serif
+    h1
+      font-size: 3rem
+      text-align: center
+      & ~ h2
+        text-align: center
+        margin-top: 0
+    section
+      img.thumb
+        float: left
+        padding-right: 2rem
+        width: 10rem
+      img.banner
+        width: 99%
+        clear: both
+        margin-top: 2rem
+      & > div
+        width: 46%
+      .ita
+        float: left
+      .eng
+        float: right
+      article
+        clear: both
+        img.thumb
+          width: 8rem
+        &:not(:first-child)
+          border-top: 2px solid $green
+      li
+        list-style: square
+        margin-bottom: .2rem
+      form
+        text-align: center
+        &.order
+          clear: both
+    footer
+      padding-top: 3rem
+      clear: both
+      font-family: 'Domine', serif
+      font-weight: bold
+      text-align: center
