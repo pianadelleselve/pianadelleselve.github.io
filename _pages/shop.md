@@ -11,6 +11,6 @@ permalink: /shop
   {% include thumbnail.html item=item %}
   {% include values.html item=item %}
 
-<a href="/{{ item.title | slugify }}.html">Read more</a>
+<p><a href="/{{ item.title | slugify }}.html" class="read-more">Read more about {{ item.title }}</a></p>
 </article>
 {% endfor %}
