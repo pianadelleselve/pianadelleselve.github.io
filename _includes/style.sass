@@ -1,5 +1,7 @@
+// GOOGLE FONTS
 @import url('https://fonts.googleapis.com/css?family=Domine:400,700|Montserrat')
 $green: #108209
+
 html
   overflow-y: scroll
 body
@@ -23,6 +25,9 @@ body
       &:hover, &.active
         background: white
         color: $green
+    @media (max-width: 768px)
+      a
+        display: block
   a
     color: $green
     &:hover
@@ -47,6 +52,9 @@ body
         float: left
         padding-right: 2rem
         width: 10rem
+      @media (max-width: 768px)
+        img.thumb
+          float: none
       img.banner
         width: 99%
         clear: both
@@ -57,6 +65,11 @@ body
         float: left
       .eng
         float: right
+      @media (max-width: 768px)
+        .ita, .eng
+          width: auto
+          float: none
+          margin-bottom: 1rem
       article
         clear: both
         img.thumb
